@@ -6,7 +6,12 @@ Javascript style version of C-language.
 * Functions behave like nested scopes for variable visibility
 * No global variables, top scope stack variables visible to all levels directly
 
-Example code:
+Example code (example.cst):
 ```
-...
+int var = 1;
+int entry(int ivar) {
+  int ovar = ivar + var;
+  return ovar;
+}
+int rvar = entry(var);
 ```
